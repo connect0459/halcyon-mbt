@@ -1,6 +1,6 @@
 # todo - halcyon
 
-Current state: **phase 2 complete.**
+Current state: **phase 3 complete.**
 
 ---
 
@@ -10,7 +10,7 @@ Current state: **phase 2 complete.**
 - **Targets**: all four backends (`js`, `wasm`, `wasm-gc`, `native`) from the start.
 - **Decoders**: PNG and JPEG (baseline, then progressive) are implemented in this repository, with no codec dependency.
 - **Test oracle**: expectations come from fixed fixtures under `testdata/`, produced by a reference decoder (libpng / libjpeg-turbo) by scripts under `tools/`. Each fixture records its provenance. The test suite never depends on another MoonBit codec at run time.
-- **JPEG comparison**: pixel-exact equality is not expected because IDCT rounding and chroma upsampling differ between decoders. The reference configuration (libjpeg-turbo, `islow` DCT, fancy upsampling) and the allowed maximum per-channel difference are fixed when the JPEG phase starts.
+- **JPEG comparison**: the reference configuration is libjpeg-turbo with the `islow` DCT, fancy upsampling, and no block smoothing. The decoder reproduces that arithmetic, so the allowed maximum per-channel difference is zero.
 - **Coverage goal**: every reachable line. Provably unreachable lines are documented.
 - **Naming**: module `connect0459/halcyon`, repository `halcyon-mbt`.
 
@@ -26,7 +26,7 @@ Each phase follows Red → Green → Refactor.
 
 - [x] **Phase 1 — Pure logic**: `image`, `process`, `cache`
 - [x] **Phase 2 — PNG**: `internal/inflate`, `decode`, `decode/png`, with PngSuite-based fixtures
-- [ ] **Phase 3 — JPEG**: baseline, then progressive
+- [x] **Phase 3 — JPEG**: baseline, then progressive
 - [ ] **Phase 4 — Pipeline and I/O**: `source`, `pipeline`, per-target `Fetcher` / `DiskStore` implementations
 
 ---
