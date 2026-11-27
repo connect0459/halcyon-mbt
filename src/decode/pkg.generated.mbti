@@ -1,0 +1,37 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "connect0459/halcyon/decode"
+
+import {
+  "connect0459/halcyon/image",
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn detect_format(Bytes) -> @image.ImageFormat?
+
+// Errors
+#derive(Eq, @debug.Debug)
+pub(all) suberror DecodeError {
+  UnknownFormat
+  Truncated
+  Malformed(String)
+  Unsupported(String)
+  LimitExceeded(Int32, Int32)
+}
+
+// Types and methods
+pub struct DecodeLimits {
+  // private fields
+}
+pub fn DecodeLimits::check(Self, Int32, Int32) -> Unit raise DecodeError
+pub fn DecodeLimits::default() -> Self
+pub fn DecodeLimits::max_pixels(Self) -> Int32
+pub fn DecodeLimits::new(max_pixels~ : Int32) -> Self
+
+// Type aliases
+
+// Traits
+pub(open) trait ImageDecoder {
+  fn format(Self) -> @image.ImageFormat
+  fn decode(Self, Bytes) -> @image.PixelBuffer raise DecodeError
+}
