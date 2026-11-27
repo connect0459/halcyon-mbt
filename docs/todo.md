@@ -1,6 +1,6 @@
 # todo - halcyon
 
-Current state: **phase 1 complete.**
+Current state: **phase 2 complete.**
 
 ---
 
@@ -25,7 +25,7 @@ Current state: **phase 1 complete.**
 Each phase follows Red → Green → Refactor.
 
 - [x] **Phase 1 — Pure logic**: `image`, `process`, `cache`
-- [ ] **Phase 2 — PNG**: `internal/inflate`, `decode`, `decode/png`, with PngSuite-based fixtures
+- [x] **Phase 2 — PNG**: `internal/inflate`, `decode`, `decode/png`, with PngSuite-based fixtures
 - [ ] **Phase 3 — JPEG**: baseline, then progressive
 - [ ] **Phase 4 — Pipeline and I/O**: `source`, `pipeline`, per-target `Fetcher` / `DiskStore` implementations
 
