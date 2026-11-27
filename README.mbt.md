@@ -3,7 +3,7 @@
 [![CI](https://github.com/connect0459/halcyon-mbt/actions/workflows/ci.yml/badge.svg)](https://github.com/connect0459/halcyon-mbt/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://github.com/connect0459/halcyon-mbt/blob/main/LICENSE)
 
-An image loading, decoding, processing, and caching library for [MoonBit](https://moonbitlang.com), inspired by [Kingfisher](https://github.com/onevcat/Kingfisher).
+An image loading, decoding, processing, and caching library for [MoonBit](https://moonbitlang.com).
 
 > **Status: pre-alpha.** No public API exists yet. See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the planned design and [docs/todo.md](docs/todo.md) for progress.
 
