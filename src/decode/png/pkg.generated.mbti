@@ -1,0 +1,23 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "connect0459/halcyon/decode/png"
+
+import {
+  "connect0459/halcyon/decode",
+  "connect0459/halcyon/image",
+}
+
+// Values
+
+// Errors
+
+// Types and methods
+pub struct PngDecoder {
+  // private fields
+}
+pub fn PngDecoder::decode(Self, Bytes) -> @image.PixelBuffer raise @decode.DecodeError
+pub fn PngDecoder::new(limits? : @decode.DecodeLimits) -> Self
+pub impl @decode.ImageDecoder for PngDecoder
+
+// Type aliases
+
+// Traits
