@@ -1,0 +1,10 @@
+name: halcyon-mbt
+version: 0.1.0
+description: APM project for halcyon-mbt
+author: connect0459
+dependencies:
+  apm:
+  - moonbitlang/skills#8b9f1bad14bc62560dbe3537855379e561a4e066
+  mcp: []
+includes: auto
+scripts: {}
