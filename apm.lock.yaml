@@ -1,0 +1,22 @@
+lockfile_version: '4'
+apm_version: 0.39.0
+manifest_targets: []
+dependencies:
+- repo_url: moonbitlang/skills
+  name: moonbit-skills
+  host: github.com
+  resolved_commit: 8b9f1bad14bc62560dbe3537855379e561a4e066
+  resolved_ref: 8b9f1bad14bc62560dbe3537855379e561a4e066
+  version: 8b9f1ba
+  package_type: marketplace_plugin
+  content_hash: sha256:cbcfd91a2bfe122bbaa76c8443874df795aac811cf051c13d0e24ae53eb24a7e
+  native_plugin:
+    name: moonbit-skills
+    root: .agents/plugins/moonbit-skills
+    fingerprint: sha256:229452e3be9f0a906c4ab22acaa8eb96d82873ca472fef34e4d0c0d481975c00
+    marketplace:
+      name: apm-p-3c598730
+      path: ./.agents/plugins
+  native_declared:
+  - claude
+deployments: []
