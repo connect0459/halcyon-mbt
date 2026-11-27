@@ -1,0 +1,44 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "connect0459/halcyon/process"
+
+import {
+  "connect0459/halcyon/image",
+}
+
+// Values
+pub fn[P : ImageProcessor] key_for(String, P) -> @image.ImageKey
+
+// Errors
+
+// Types and methods
+pub struct Compose {
+  // private fields
+}
+pub fn Compose::identifier(Self) -> String
+pub fn Compose::new(Array[&ImageProcessor]) -> Self
+pub fn Compose::process(Self, @image.PixelBuffer) -> @image.PixelBuffer raise @image.ImageError
+pub impl ImageProcessor for Compose
+
+pub struct Crop {
+  // private fields
+}
+pub fn Crop::identifier(Self) -> String
+pub fn Crop::new(Int32, Int32, Int32, Int32) -> Self
+pub fn Crop::process(Self, @image.PixelBuffer) -> @image.PixelBuffer raise @image.ImageError
+pub impl ImageProcessor for Crop
+
+pub struct Resize {
+  // private fields
+}
+pub fn Resize::identifier(Self) -> String
+pub fn Resize::new(Int32, Int32) -> Self
+pub fn Resize::process(Self, @image.PixelBuffer) -> @image.PixelBuffer raise @image.ImageError
+pub impl ImageProcessor for Resize
+
+// Type aliases
+
+// Traits
+pub(open) trait ImageProcessor {
+  fn identifier(Self) -> String
+  fn process(Self, @image.PixelBuffer) -> @image.PixelBuffer raise @image.ImageError
+}

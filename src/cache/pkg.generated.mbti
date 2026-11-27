@@ -1,0 +1,36 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "connect0459/halcyon/cache"
+
+import {
+  "connect0459/halcyon/image",
+}
+
+// Values
+
+// Errors
+
+// Types and methods
+pub struct ManualClock {
+  // private fields
+}
+pub fn ManualClock::advance(Self, Int64) -> Unit
+pub fn ManualClock::new(Int64) -> Self
+pub impl Clock for ManualClock
+
+pub struct MemoryCache {
+  // private fields
+}
+pub fn MemoryCache::clear(Self) -> Unit
+pub fn MemoryCache::count(Self) -> Int32
+pub fn MemoryCache::get(Self, @image.ImageKey) -> @image.PixelBuffer?
+pub fn MemoryCache::new(&Clock, Int32, ttl_millis? : Int64) -> Self
+pub fn MemoryCache::remove(Self, @image.ImageKey) -> Unit
+pub fn MemoryCache::set(Self, @image.ImageKey, @image.PixelBuffer) -> Unit
+pub fn MemoryCache::total_cost(Self) -> Int32
+
+// Type aliases
+
+// Traits
+pub(open) trait Clock {
+  fn now_millis(Self) -> Int64
+}

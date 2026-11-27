@@ -1,0 +1,59 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "connect0459/halcyon/image"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+
+// Errors
+#derive(Eq, @debug.Debug)
+pub(all) suberror ImageError {
+  InvalidDimensions(Int32, Int32)
+  DataLengthMismatch(Int32, Int32)
+  RegionOutOfBounds(Int32, Int32, Int32, Int32)
+}
+
+// Types and methods
+#derive(Eq, Hash, @debug.Debug)
+pub(all) enum ImageFormat {
+  Png
+  Jpeg
+}
+pub impl Show for ImageFormat
+
+#derive(Eq, Hash, @debug.Debug)
+pub struct ImageKey {
+  // private fields
+}
+pub fn ImageKey::new(String, String) -> Self
+pub fn ImageKey::of_source(String) -> Self
+pub fn ImageKey::processor_id(Self) -> String
+pub fn ImageKey::source(Self) -> String
+pub impl Show for ImageKey
+
+#derive(Eq, @debug.Debug)
+pub struct PixelBuffer {
+  // private fields
+}
+pub fn PixelBuffer::byte_size(Self) -> Int32
+pub fn PixelBuffer::data(Self) -> Bytes
+pub fn PixelBuffer::height(Self) -> Int32
+pub fn PixelBuffer::new(Int32, Int32, Bytes) -> Self raise ImageError
+pub fn PixelBuffer::pixel(Self, Int32, Int32) -> Rgba?
+pub fn PixelBuffer::width(Self) -> Int32
+
+#derive(Eq, @debug.Debug)
+pub struct Rgba {
+  // private fields
+}
+pub fn Rgba::a(Self) -> Int32
+pub fn Rgba::b(Self) -> Int32
+pub fn Rgba::g(Self) -> Int32
+pub fn Rgba::new(Int32, Int32, Int32, Int32) -> Self
+pub fn Rgba::r(Self) -> Int32
+
+// Type aliases
+
+// Traits
